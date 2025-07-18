@@ -8,8 +8,8 @@ import { useState, useEffect} from 'react'
 
 import {useFetch} from './hooks/useFetch';
 
-const url = "http://localhost:3001/api"
-//const url = "https://across-the-globe-backend.onrender.com/api"
+//const url = "http://localhost:3001/api"
+const url = "https://across-the-globe-backend.onrender.com/api"
 
 function App() {
 
@@ -95,7 +95,7 @@ function App() {
     setTranslateSearch(e.target.value);
   }
 
-// function that: toggles whether the 'Add New Resource' box is visible or not (toggled on button click); calls the addingNotEditing function; sets the wholeEditObject array to empty array (resetting input fields for add new resource)
+// function that: toggles whether the 'Add New Resource' box is visible or not (toggled on button click); sets the wholeEditObject array to empty array (resetting input fields for add new resource)
 
 const handleVisibility = event => {
 
@@ -141,7 +141,7 @@ const changeStartState = event => {
 
   // Function to get all when no input has been entered in the searchbar, makes fetch request for all objects (called inside handleClick or handleTranslation)
 
-  async function handleGetAll() {
+  async function handleGetAll() {   //TODO: Can i delete this function and just add the setAction into the handkeClick?
 
     setAction({ request:'getAll',
                 language: language

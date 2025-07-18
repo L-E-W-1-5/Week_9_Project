@@ -34,9 +34,9 @@ export const useFetch = () => {
     const [request, setAction] = useState();
     const [data, dispatch] = useReducer(reduce, "");
 
-    useEffect(() => {
+    useEffect(() => {       //TODO: Should change this into just a switch statement instead of the reducer since there isnt data that needs to persist.
 
-        if(request)
+        if(request){
 
         dispatch({  type: request.request, 
                     title: request.title, 
@@ -44,6 +44,7 @@ export const useFetch = () => {
                     foreignTitle: request.foreignTitle,
                     postData: request.postData
                 })
+        }
 
     }, [request]);
 

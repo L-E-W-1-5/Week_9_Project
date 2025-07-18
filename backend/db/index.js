@@ -11,5 +11,3 @@ export const pool = new Pool({
 export default function query(text, params, callback) {
   return pool.query(text, params, callback);
 }
-
-
