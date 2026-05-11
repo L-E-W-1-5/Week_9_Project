@@ -1,13 +1,14 @@
 import { pool } from "./index.js"
+import { neonConnection } from "./index.js";
 
 export async function createObjectTableFR() {
-  return await pool.query(
+  return await neonConnection.query(
     "CREATE TABLE IF NOT EXISTS frenchDefinitions (id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, englishtitle TEXT, title TEXT, definition TEXT, example TEXT, links TEXT, week INT);"
   );
 }
 
 export async function dropObjectTableFR() {
-  return await pool.query("DROP TABLE IF EXISTS frenchDefinitions;");
+  return await neonConnection.query("DROP TABLE IF EXISTS frenchDefinitions;");
 }
 
 export async function populateObjectTableFR() {
@@ -175,7 +176,7 @@ export async function populateObjectTableFR() {
 ];
 
 
-  return await pool.query(
+  return await neonConnection.query(
     "INSERT INTO frenchDefinitions (englishtitle, title, definition, example, links, week) (SELECT englishtitle, title, definition, example, links, week FROM json_populate_recordset(NULL::frenchDefinitions, $1::JSON));",
     [JSON.stringify(objects)]
   );

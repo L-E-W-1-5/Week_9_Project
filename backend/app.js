@@ -6,6 +6,9 @@ import express from "express";
 import morgan from "morgan";
 import cors from 'cors'
 import { createObjectTable, dropObjectTable, populateObjectTable, resetObjectTable } from "./db/helpers.js";
+import { createObjectTableDE, dropObjectTableDE, populateObjectTableDE, resetObjectTableDE } from "./db/helpersDE.js";
+import { createObjectTableFR, dropObjectTableFR, populateObjectTableFR, resetObjectTableFR } from "./db/helpersFR.js";
+import { createObjectTableES, dropObjectTableES, populateObjectTableES, resetObjectTableES } from "./db/helpersES.js";
 
 const PORT = process.env.PORT;
 
@@ -15,7 +18,9 @@ app.use(cors())
 app.use(morgan("dev"));
 app.use(express.json());
 
-//populateObjectTable();
+// resetObjectTableES()
+// resetObjectTableFR()
+// resetObjectTableDE()
 
 app.use("/api/englishDefinitions", router);
 app.use("/api/spanishDefinitions", spanishRouter);

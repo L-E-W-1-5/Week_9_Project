@@ -11,7 +11,11 @@ import {
 
 
 router.get("/", async (req, res) => {
+
+    console.log("get all")
     const allEnglishObject = await getEnglishDefinitions();
+
+    console.log("18", allEnglishObject)
     return res.json({ success: true, payload: allEnglishObject });
 })
 
