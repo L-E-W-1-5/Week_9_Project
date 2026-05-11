@@ -7,21 +7,26 @@ import "./FilterBar.css"
 export function FilterBar(props) {
   
         return (
-            <div className="languagesDiv">
-                    {props.language !== "englishDefinitions" && <input className="input" onChange={props.handleTranslate} placeholder="Enter word in English to get translation"></input>}
+            <div className="languageDiv">
+
+                {props.language !== "englishDefinitions" && <input className="input" onChange={props.handleTranslate} placeholder="Enter word in English to get translation"></input>}
 
                 <div className="translatorButtonDiv">
-                    {props.language !== "englishDefinitions" && <button className="translatorButton" onClick={() => props.handleClick('getByTitle')}>Get translation</button>}
+
+                    {props.language !== "englishDefinitions" && <button className="translatorButton all-buttons" onClick={() => props.handleClick('getByTitle')}>Get translation</button>}
+               
                 </div>  
 
-                    <input className="input" onChange={props.handleChange} placeholder="Enter search here"></input>
+                <input className="input" onChange={props.handleChange} placeholder="Enter search here"></input>
                     
                 <div className="buttonDiv">
-                    <button className="searchButton" onClick={() => props.handleClick('getByTitle')}>Search</button>
-                    <button className="getAllButton" onClick={() => props.handleClick('getAll')}>Get All</button>
-                    <button className="sortByWeekButton" onClick={props.handleSort}>Sort by week</button>
-                    <button className="favouriteButton" onClick={props.displayFave}>Show favourites</button>
+                    <button className="searchButton all-buttons" onClick={() => props.handleClick('getByTitle')}>Search</button>
+                    <button className="getAllButton all-buttons" onClick={() => props.handleClick('getAll')}>Get All</button>
+                    <button className="sortByWeekButton all-buttons" onClick={props.handleSort}>Sort by week</button>
+                    <button className="favouriteButton all-buttons" onClick={props.displayFave}>Show favourites</button>
                 </div>
+
+               
             </div>
         )
 }

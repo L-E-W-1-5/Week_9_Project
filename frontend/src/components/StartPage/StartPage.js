@@ -13,10 +13,10 @@ export function StartPage(props) {
             <h3 id="title" className="chooseYourLanguage">Choose Your Language</h3>
 
             <div className="langButtonDiv">
-                <button id="langButtonEnglish" className="langButtonEnglish" name="englishDefinitions" onClick={props.handleLanguage}></button>
-                <button className="langButtonSpanish" name="spanishDefinitions" onClick={props.handleLanguage}></button>
-                <button className="langButtonFrench" name="frenchDefinitions" onClick={props.handleLanguage}></button>
-                <button className="langButtonGerman" name="germanDefinitions" onClick={props.handleLanguage}></button>
+                <button id="langButtonEnglish" className="langButtonEnglish allButtons" name="englishDefinitions" onClick={props.handleLanguage}></button>
+                <button className="langButtonSpanish allButtons" name="spanishDefinitions" onClick={props.handleLanguage}></button>
+                <button className="langButtonFrench allButtons" name="frenchDefinitions" onClick={props.handleLanguage}></button>
+                <button className="langButtonGerman allButtons" name="germanDefinitions" onClick={props.handleLanguage}></button>
             </div>
         </div>
     )

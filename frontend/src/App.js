@@ -170,9 +170,11 @@ const changeStartState = event => {
         return;
       }
 
+      console.log("translate search", translateSearch, language)
+
       setAction({ request: 'getByForeignTitle',
                   language: language,
-                  title: translateSearch
+                  foreignTitle: translateSearch
                 })
     }
   }
@@ -297,27 +299,39 @@ const changeStartState = event => {
       </div>
 
       <div className="main-container">
-        <div className="languages">
-          <Header language={language} handleLanguage={handleLanguage}></Header>
-        </div>
 
-        <div className="search-bar">
-          <FilterBar language={language} handleClick={handleClick} handleTranslate={handleTranslateSearch} handleChange={handleChange} handleSort={sortByWeek} displayFave={displayFavourite}></FilterBar>
-        </div>
+        
+        <Header language={language} handleLanguage={handleLanguage}></Header>
+       
+        <FilterBar language={language} handleClick={handleClick} handleTranslate={handleTranslateSearch} handleChange={handleChange} handleSort={sortByWeek} displayFave={displayFavourite}></FilterBar>
+       
+
       </div>
+
 
       <div className="form-container" style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+
         <Input visibility={handleVisibility} handleNewObject={handleNewObject} language={language} required={true} wholeEditObject={editObject}></Input>
+      
       </div>
+
 
       <div className="form-container" style={{ visibility: isEditVisible ? 'visible' : 'hidden' }}>
+
         <Input visibility={handleVisibilityEdit} handleNewObject={handleEdit} language={language} required={false} wholeEditObject={editObject}></Input>
+     
       </div>
 
+
       <div className="main-container">
-        <button className="addNewButton" onClick={handleVisibility}>Add New Resource</button>
+
+        <button className="addNewButton all-buttons" onClick={handleVisibility}>Add New Resource</button>
+
         <ObjectList object={object} handleFavourite={favourite} handleDelete={handleDelete} handleEdit={handleObjectState} ></ObjectList>
+     
       </div>
+
+
     </div>
   );
 }

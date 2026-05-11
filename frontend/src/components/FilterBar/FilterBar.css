@@ -1,3 +1,7 @@
+/* .filterbar-container{
+
+} */
+
 .buttonDiv{
     display: flex;
     flex-direction: row;
@@ -21,6 +25,11 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.all-buttons{
+    min-height: 37px;
+}
+
 .searchButton:hover, .getAllButton:hover, .sortByWeekButton:hover, .favouriteButton:hover, .translatorButton:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -28,19 +37,22 @@
 
 .input{
     width: 75vw;
-    height: 7vh;
+    height: 5vh;
     background-color: white;
     border: 1px solid var(--darkColor);
     border-radius: 5px;
     color: var(--darkColor);
     font-size: 100%;
     font-weight: bold;
-    margin: 15px;
+    
+    min-height: 40px;
+    align-self: center;
 }
 
 .languageDiv{
     display:flex;
-    justify-content:space-between;
+    flex-direction: column;
+    justify-content: space-around;
     justify-content: center;
     padding: 10px;
 }
@@ -48,4 +60,21 @@
 .translatorButtonDiv{
     display: flex;
     justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 800px){
+
+    .buttonDiv{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+
+    .all-buttons{
+        margin: 10px;
+        min-width: 150px;
+        font-size: 0.8rem;
+    }
 }

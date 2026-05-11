@@ -5,7 +5,7 @@ import './Header.css'
 export function Header(props) {
 
     return (
-        <div className="headerDiv">
+        <div className="header-container">
 
             <div className="headerButtons">
                 <button id="ebutton" className={props.language === "englishDefinitions" ? "highlighted" : ""} name="englishDefinitions" onClick={props.handleLanguage}></button>

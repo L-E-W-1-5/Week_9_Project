@@ -4,7 +4,7 @@
   font-family: Georgia, serif;
   --darkColor: #1A1B41;
   --lightColor: #C2E7DA;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 
@@ -24,8 +24,9 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
+  width: 100vw;
 }
 
 .start-page {
@@ -56,6 +57,7 @@
   width: 15vw;
   min-width: 175px;
   height: 5vh;
+  max-height: 37px;
   background-color: var(--lightColor);
   border: 1px solid var(--darkColor);
   border-radius: 5px;
@@ -63,6 +65,7 @@
   font-size: 100%;
   font-weight: bold;
   margin: 10px;
+  align-self: center;
 }
 
 .addNewButton:hover {
