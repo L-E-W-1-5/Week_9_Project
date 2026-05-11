@@ -1,7 +1,7 @@
 import { useState, useEffect, useReducer } from "react";
 
-//const url = "https://across-the-globe-backend.onrender.com/api"
-const url = "http://localhost:3001/api"
+const url = "https://across-the-globe-backend.onrender.com/api"
+//const url = "http://localhost:3001/api"
 
 const options = {headers: {Accept: "application/json"}}
 
