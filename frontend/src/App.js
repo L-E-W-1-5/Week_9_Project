@@ -8,8 +8,8 @@ import { useState, useEffect} from 'react'
 
 import {useFetch} from './hooks/useFetch';
 
-//const url = "http://localhost:3001/api"
-const url = "https://across-the-globe-backend.onrender.com/api"
+const url = "http://localhost:3001/api"
+//const url = "https://across-the-globe-backend.onrender.com/api"
 
 function App() {
 
