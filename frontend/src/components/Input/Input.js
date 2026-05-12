@@ -42,10 +42,14 @@ export function Input(props) {
 
             <button className="exitButton" onClick={props.visibility}>X</button>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-input-container" onSubmit={handleSubmit(onSubmit)}>
 
-                {props.language !== "englishDefinitions" && <div>
+                {props.language !== "englishDefinitions" && 
+
+                <div className="form-inputs">
+
                     <label>English Title</label>
+
                     <input 
                         type="text" 
                         name="englishtitle" 
@@ -54,7 +58,9 @@ export function Input(props) {
                             minLength: 3
                         })} 
                         defaultValue={props.wholeEditObject.englishtitle}>
-                    </input></div>}
+                    </input>
+                </div>}
+
                 {errors.englishtitle && errors.englishtitle.type === "required" && (
                     <p className='error'>Title must not be blank</p>
                 )}
@@ -62,6 +68,7 @@ export function Input(props) {
                     <p className='error'>Title must have at least 4 characters</p>
                 )}
 
+                <div className="form-inputs">
                 <label>Title</label> 
                 <input 
                     type="text" 
@@ -78,7 +85,9 @@ export function Input(props) {
                 {errors.title && errors.title.type === "minLength" && (
                     <p className='error'>Title must have at least 4 characters</p>
                 )}
+                </div>
 
+                <div className="form-inputs">
                 <label>Definition</label>
                 <input 
                     type="text" 
@@ -95,7 +104,9 @@ export function Input(props) {
                 {errors.definition && errors.definition.type === "minLength" && (
                     <p className='error'>Definition must have at least 20 characters</p>
                 )}
+                </div>
 
+                <div className="form-inputs">
                 <label>Example</label>
                 <input 
                     type="text" 
@@ -111,7 +122,9 @@ export function Input(props) {
                 {errors.example && errors.example.type === "minLength" && (
                     <p className='error'>Example must have at least 10 characters</p>
                 )}
+                </div>
 
+                <div className="form-inputs">
                 <label>Links</label>
                 <input 
                     type="text" 
@@ -127,7 +140,9 @@ export function Input(props) {
                 {errors.links && errors.links.type === "minLength" && (
                     <p className='error'>Link must have at least 10 characters</p>
                 )}
+                </div>
 
+                <div className="form-inputs">
                 <label>Week</label>
                 <input 
                     type="number"
@@ -141,6 +156,7 @@ export function Input(props) {
                 {errors.week && errors.week.type === "required" && (
                     <p className='error'>Week must not be blank</p>
                 )}
+                </div>
 
             <div className="add-button-div">
             <button type="submit" className="addButton">Add</button>

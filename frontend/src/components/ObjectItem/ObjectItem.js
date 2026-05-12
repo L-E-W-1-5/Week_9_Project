@@ -12,7 +12,7 @@ export function ObjectItem(props) {
 
     return (
         <div className="item-container">
-            <img alt="examples" src={props.example}></img>
+            <img alt="example not available" src={props.example}></img>
 
             <div className="item-text">
                 <div className="titleDiv">

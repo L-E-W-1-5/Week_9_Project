@@ -1,12 +1,18 @@
 img {
-  width: 300px;
+  max-width: 100%;
+  min-width: 50px;
+  max-height: 180px;
+  min-height: 50px;
   border: 2px solid var(--darkColor);
   padding: 1%;
-  margin: 1%;
+  margin: 5px;
+  overflow-x: hidden;
+  border-radius: 10px;
 }
 
 .item-container {
   display: flex;
+  flex-direction: row;
   width: 80%;
   height: auto;
   border: 3px solid var(--lightColor);
@@ -14,13 +20,15 @@ img {
   color: var(--darkColor);
   margin: 15px;
   border-radius: 15px;
+  padding: 5px;
 }
 
 .item-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   justify-content: space-between;
+  /* align-items: center; */
   width: 100%;
   height: auto;
   padding: 10px;
@@ -30,14 +38,19 @@ img {
   display: flex;
   justify-content: center;
   padding: 10px;
+  /* align-items: center; */
+  /* margin-left: 50%;
+  transform: translateX(-50%) */
+  
 }
 
 .titles {
   font-size: 2rem;
+  
   font-weight: bold;
   color: var(--darkColor);
   text-decoration: underline;
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
 }
 
 .week {
@@ -85,4 +98,23 @@ img {
   margin-top: auto;
   border-color: white;
   border-width: 2px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .item-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* .titleDiv {
+    margin-left: 50%;
+    transform: translateX(-50%)
+  
+  } */
+
+  .buttons {
+    margin: 5px;
+  }
 }

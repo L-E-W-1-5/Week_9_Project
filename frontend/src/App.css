@@ -1,3 +1,8 @@
+/* body{
+  max-width:fit-content;
+} */
+
+
 * {
   margin: 0;
   padding:0;
@@ -5,12 +10,14 @@
   --darkColor: #1A1B41;
   --lightColor: #C2E7DA;
   /* overflow-x: hidden; */
+  /* max-width: 100vw; */
 }
 
 
 :root {
   background-color: var(--darkColor);
   color: var(--lightColor);
+  
 }
 
 .App {
@@ -72,4 +79,6 @@
   opacity: 0.8;
   cursor: pointer;
 }
+
+
 
