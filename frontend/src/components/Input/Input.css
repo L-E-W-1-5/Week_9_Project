@@ -87,11 +87,31 @@
 
 @media only screen and (max-width: 900px) {
 
+  .form-container{
+    width: 98%;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+   .form-items{
+    gap: 15px;
+
+    width: 100%;
+
+    
+  }
 
   .form-items input{
     font-size: 0.8rem;
     font-weight: normal;
     min-height: 1rem;
+    width: 100%;
+  }
+
+  .form-input-container{
+    width: 97%;
+    
   }
 } 
 
@@ -135,6 +155,9 @@
   }
 
 }
+
+
+
 
 @media only screen and (max-height: 400px) {
   .form-items{

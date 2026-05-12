@@ -63,6 +63,10 @@ img {
   display: flex;
   justify-content: center;
   padding: 10px;
+  word-break: break-word;
+  /* overflow-wrap: break-word; */
+  white-space: normal;
+  /* flex-wrap: ; */
 }
 
 .buttonDiv {
